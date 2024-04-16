@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PROGRAM KREDIT RUMAH</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;900&display=swap');
+
+    body {
+    font-family: 'poppins';
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    }
+
+h1 {
+    text-align: center;
+    color: #333;
+    }
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select,
+input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+input[type="number"]{
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+
+input[type="button"],
+input[type="reset"] {
+    background-color: #ccd0d3;
+    color: #070707;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: #b8babd;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+    </style>
+</head>
+<body>
+   <h1>PROGRAM KREDIT RUMAH</h1>
+    <hr> <!-- Menampilkan garis-->
+    <center><form id="kredit-form">
+        <div>
+            <label for="type-rumah">Type Rumah :</label>
+            <select name="type-rumah" id="type-rumah">
+                <option value="Alamanda">Alamanda</option>
+                <option value="Mawar">Mawar</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="lama-kredit">Lama Kredit :</label>
+            <input type="number" id="lama-kredit" name="lama-kredit">
+        </div>
+        <hr> <!-- Menampilkan garis-->
+        <div>
+            <input type="button" value="Proses" id="proses">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+    <div style="padding: 2rem;">
+        <h2> Output : </h2>
+        <p>Type Rumah = <span id="output-type-rumah"></span></p>
+        <p>Harga Rumah = <span id="harga-rumah"></span></p>
+        <p>Uang Muka = <span id="uang-muka"></span></p>
+        <p>Sisa = <span id="sisa"></span></p>
+        <p>Lama Kredit = <span id="output-lama-kredit"></span></p>
+        <p>Angsuran = <span id="output-angsuran"></span></p>
+    <br>
+        <h2>Data Tabel:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Bulan</th>
+                    <th>Angsuran</th>
+                    <th>Sisa</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+            </tbody>
+        </table>
+    </div>
+    <script src="program.js"></script>
+</body>
+</html>
